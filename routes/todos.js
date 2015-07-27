@@ -1,7 +1,6 @@
 var express = require('express');
 var router = express.Router();
 
-var mongoose = require('mongoose');
 var Todo = require('../models/Todo.js');
 
 /* GET users listing. */
@@ -14,9 +13,9 @@ router.get('/', function(req, res, next) {
 
 /* POST /todos */
 router.post('/', function(req, res, next) {
-  Todo.create(req.body, function (err, post) {
+  Todo.create(req.body, function (err, todo) {
     if (err) return next(err);
-    res.json(post);
+    res.json(todo);
   });
 });
 
