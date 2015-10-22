@@ -6,3 +6,6 @@ DB with mongo and mongoose
 
 # view with Jade
 Future with AngularJS
+
+#test
+protractor test/conf.js
